@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sand-50: #fbf6ee;
+  --color-sand-100: #f5ead6;
+  --color-sand-200: #ecd8b3;
+  --color-sand-300: #e0c088;
+  --color-oasis-50: #e8f6f5;
+  --color-oasis-100: #c7e9e6;
+  --color-oasis-400: #2aa39f;
+  --color-oasis-500: #0e7c7b;
+  --color-oasis-600: #0a5f5f;
+  --color-oasis-700: #084c4c;
+  --color-terracotta-400: #e58f52;
+  --color-terracotta-500: #d9762f;
+  --color-terracotta-600: #b9622b;
+  --color-ink-900: #22262b;
+  --font-cairo: "Cairo", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-cairo);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-oasis-100);
+  border-radius: 999px;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-up {
+  animation: fade-up 0.5s ease both;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+.skeleton {
+  background: linear-gradient(90deg, #f0e6d6 25%, #f8f1e4 37%, #f0e6d6 63%);
+  background-size: 800px 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+
+/* ── DESERT GOLD THEME OVERRIDES ── */
+:root {
+  --color-sand-50: #F5EDD8;
+  --color-sand-100: #EDD9B0;
+  --color-sand-200: #DCC9A5;
+  --color-sand-300: #C9AD7C;
+  --color-oasis-50: #F5EDD8;
+  --color-oasis-100: #E8D2A0;
+  --color-oasis-400: #C98B2E;
+  --color-oasis-500: #B97924;
+  --color-oasis-600: #9A6318;
+  --color-oasis-700: #7A4E10;
+  --color-terracotta-400: #D9A441;
+  --color-terracotta-500: #C98B2E;
+  --color-terracotta-600: #B97924;
+  --color-ink-900: #1A0D00;
+}
+
+/* Remove teal/cyan from buttons and links */
+a[class*="oasis"], button[class*="oasis"] {
+  --tw-bg-opacity: 1;
+}
