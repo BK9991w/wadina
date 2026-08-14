@@ -10,18 +10,14 @@ const nextConfig: NextConfig = {
     "*.loca.lt",
   ],
 
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.pexels.com",
-      },
-      {
-        protocol: "https",
-        hostname: "**",
-      },
-    ],
-  },
-};
+ images: {
+  unoptimized: true,
+  remotePatterns: [
+    {
+      protocol: "https",
+      hostname: "images.pexels.com",
+    },
+  ],
+},
 
 export default nextConfig;
