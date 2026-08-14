@@ -1,4 +1,3 @@
-
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -10,14 +9,15 @@ const nextConfig: NextConfig = {
     "*.loca.lt",
   ],
 
- images: {
-  unoptimized: true,
-  remotePatterns: [
-    {
-      protocol: "https",
-      hostname: "images.pexels.com",
-    },
-  ],
-},
+  images: {
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.pexels.com",
+      },
+    ],
+  },
+};
 
 export default nextConfig;
